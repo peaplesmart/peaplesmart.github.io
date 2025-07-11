@@ -1,0 +1,96 @@
+<div class="container mx-auto px-4 lg:max-w-7xl text-slate-500 dark:text-slate-300 my-16">
+    <div class="font-bold uppercase text-teal-600 dark:text-teal-400 text-sm mb-2">Artikel</div>
+    <h2 class="text-3xl font-bold tracking-tight mb-2">Explore Artikel</h2>
+    <p class="text-lg mb-8 text-slate-500 dark:text-slate-300">Daftar artikel di Petani Kode.</p>
+    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
+        {{ range .Paginator.Pages }}
+        <article
+            class="bg-white dark:bg-slate-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+            <a href="{{ .RelPermalink }}" class="block">
+                {{/* Image Handling */}}
+                {{ if .Params.image }}
+                {{ $img := resources.Get .Params.image }}
+                {{ if $img }}
+                {{ $resized := $img.Fill "600x400 Center" }}
+                <img class="w-full h-48 object-cover" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}"
+                    loading="lazy">
+                {{ else }}
+                <img class="w-full h-48 object-cover" src="{{ .Params.image | relURL }}" alt="{{ .Title }}"
+                    loading="lazy">
+                {{ end }}
+                {{ else }}
+                <div class="w-full h-48 bg-gradient-to-r from-teal-400 to-blue-500 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white opacity-80" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                {{ end }}
+            </a>
+
+            <div class="p-6">
+                <!-- Meta Information -->
+                <div class="flex flex-wrap items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
+                    <div class="flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                        <time datetime="{{ .Date.Format " 2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+                    </div>
+
+                    {{ with .Params.categories }}
+                    <span>•</span>
+                    <div class="flex items-center">
+                        {{ range . }}
+                        <a href="{{ " categories/" | relURL }}{{ . | urlize }}"
+                            class="hover:text-teal-600 dark:hover:text-teal-400 ml-1">
+                            {{ . }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+
+                <!-- Title -->
+                <h3
+                    class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </h3>
+
+                <!-- Summary -->
+                <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
+                    {{ .Summary | plainify | truncate 150 }}
+                </p>
+
+                <!-- Read More & Tags -->
+                <div class="flex justify-between items-center">
+                    <a href="{{ .RelPermalink }}"
+                        class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:underline">
+                        Baca selengkapnya
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg>
+                    </a>
+
+                    {{ if .Params.tags }}
+                    <div class="flex space-x-1">
+                        {{ range first 1 .Params.tags }}
+                        <a href="{{ " tags/" | relURL }}{{ . | urlize }}"
+                            class="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded hover:bg-teal-100 dark:hover:bg-teal-900 transition-colors">
+                            {{ . }}
+                        </a>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+</div>

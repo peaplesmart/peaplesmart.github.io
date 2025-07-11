@@ -1,0 +1,29 @@
+baseURL = 'https://peaplesmart.github.io/'
+languageCode = 'id'
+defaultContentLanguage = 'id'
+title = 'SoftCraft'
+ignoreLogs = ['warning-goldmark-raw-html']
+enableRobotsTXT = true
+
+[pagination]
+  disableAliases = false
+  pagerSize = 6
+  path = 'page'
+
+[taxonomies]
+  tag = "tags"
+  kategori = "kategori"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+
+[params]
+  description = "Deskripsi situs saya"

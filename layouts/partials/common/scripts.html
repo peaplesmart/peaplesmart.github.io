@@ -1,0 +1,94 @@
+
+<!-- highlight.js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+
+<!-- Pastikan Alpine.js sudah di-load di baseof.html -->
+<script src="//unpkg.com/alpinejs" defer></script>
+<style>
+  [x-cloak] { display: none !important; }
+</style>
+
+<!-- Inisialisasi store theme di Alpine.js -->
+<script>
+// static/js/alpine-theme.js
+document.addEventListener('alpine:init', () => {
+    // Inisialisasi store untuk theme management
+    Alpine.store('theme', {
+        // State untuk mode gelap
+        dark: false,
+        
+        // State untuk UI switcher (jika diperlukan)
+        switcherOpen: false,
+        
+        // State untuk mode sistem
+        system: false,
+        
+        // Inisialisasi tema saat pertama kali load
+        init() {
+            // Cek preferensi di localStorage
+            const savedTheme = localStorage.getItem('theme');
+            
+            // Cek preferensi sistem
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Set state berdasarkan preferensi yang ada
+            if (savedTheme === 'dark') {
+                this.dark = true;
+            } else if (savedTheme === 'light') {
+                this.dark = false;
+            } else if (savedTheme === 'system') {
+                this.system = true;
+                this.dark = systemPrefersDark;
+            } else {
+                // Default: ikuti preferensi sistem
+                this.system = true;
+                this.dark = systemPrefersDark;
+            }
+            
+            // Terapkan tema ke dokumen
+            this.applyTheme();
+            
+            // Pantau perubahan preferensi sistem
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (this.system) {
+                    this.dark = e.matches;
+                    this.applyTheme();
+                }
+            });
+        },
+        
+        // Set tema berdasarkan pilihan
+        setTheme(theme) {
+            if (theme === 'dark') {
+                this.dark = true;
+                this.system = false;
+                localStorage.setItem('theme', 'dark');
+            } else if (theme === 'light') {
+                this.dark = false;
+                this.system = false;
+                localStorage.setItem('theme', 'light');
+            } else { // system
+                this.system = true;
+                this.dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                localStorage.setItem('theme', 'system');
+            }
+            this.applyTheme();
+        },
+        
+        // Terapkan tema ke dokumen
+        applyTheme() {
+            if (this.dark) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        }
+    });
+        // ✅ Panggil init di sini
+    Alpine.store('theme').init();
+});
+</script>

@@ -1,0 +1,8 @@
+<div class="my-4 rounded-md overflow-hidden border dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
+  {{ with .Get "title" }}
+    <div class="px-4 py-2 text-sm font-semibold bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-white border-b dark:border-slate-600">
+      {{ . }}
+    </div>
+  {{ end }}
+  <pre><code class="language-{{ .Get "lang" | default "plaintext" }}">{{ .Inner | safeHTML }}</code></pre>
+</div>
