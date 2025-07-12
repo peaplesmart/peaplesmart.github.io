@@ -4,11 +4,21 @@
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 
 <!-- Favicon -->
-<link rel="icon" type="images/png" href="/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="images/svg+xml" href="/favicon.svg" />
-<link rel="shortcut icon" href="/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/site.webmanifest" />
+<!-- PNG Favicon -->
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+
+<!-- SVG Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+<!-- Fallback ICO -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- Apple Touch Icon (untuk iOS) -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Manifest Web App -->
+<link rel="manifest" href="/site.webmanifest">
+
 
 <!-- Tailwind CSS -->
 <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
