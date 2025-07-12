@@ -1,7 +1,8 @@
 ---
 title: "Tentang Kami"
 date: 2025-06-27
-layout: "page"
+layout: "single"
+type: "page"
 ---
 
 ## Tentang Situs Ini

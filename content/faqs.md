@@ -1,7 +1,8 @@
 ---
 title: "Pertanyaan Umum"
 date: 2025-06-27
-layout: "page"
+layout: "single"
+type: "page"
 ---
 
 ## Pertanyaan yang Sering Diajukan
