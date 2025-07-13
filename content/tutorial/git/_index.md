@@ -5,5 +5,4 @@ description: "Kumpulan Tutorial Belajar Git dalam Bahasa Indonesia. Git adalah p
 thumbnail: "/img/thumbnail/git-sqr.png"
 image: "/images/cover/git-petanikode.png"
 layout: single-tutorial
-
 ---

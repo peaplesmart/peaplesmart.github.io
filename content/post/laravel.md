@@ -1,5 +1,5 @@
 ---
-title: "Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"
+title: "Laravel"
 date: 2023-06-25
 author: "Sukaroti"
 author_title: "Senior Developer"

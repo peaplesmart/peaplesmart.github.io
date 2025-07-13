@@ -6,7 +6,7 @@
             <!-- Gambar di kiri -->
             <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                 <img class="lazyload rounded-md h-full w-full dark:brightness-75 lazyloaded"
-                    src="{{ .Params.thumbnail | default "/img/placeholder.svg" | absURL }}" 
+                    src="{{ .Params.thumbnail | default "/img/thumbnail/defautl.svg" | absURL }}" 
                     alt="{{ .Title }}"
                     loading="lazy">
             </picture>
@@ -75,7 +75,7 @@
                     <a href="{{ .RelPermalink }}" class="inline-block shrink-0 h-16 w-16 md:h-24 md:w-24">
                         <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                             <img class="lazyload object-cover h-full w-full dark:brightness-75 rounded-md lazyloaded"
-                                src="{{ .Params.thumbnail | default "/img/placeholder.svg" | absURL }}"
+                                src="{{ .Params.thumbnail | default "/img/thumbnail/default.svg" | absURL }}"
                                 alt="{{ .Title }}">
                         </picture>
                     </a>

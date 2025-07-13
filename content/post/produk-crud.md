@@ -9,7 +9,6 @@ avatar: /images/avatar.png
 thumbnail: "/images/cover/laravel-11.png"
 image: "/images/cover/laravel-11.png"
 ---
----
 
 ## Menambahkan Produk
 
@@ -50,3 +49,9 @@ public function destroy(Produk $id)
     return redirect()->route('index.index')->with('success', 'Data berhasil dihapus');
 }
 {{< /code >}}
+
+{{< smart_download
+    url="https://mega.nz/file/EFpSSKRR#SPI3_6dApfB_X2slIf9phMp9otlCcCwfjZ1kykV8biw"
+    id="SPSS"
+    name="Download SPSS 27"
+>}}
