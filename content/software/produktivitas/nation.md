@@ -10,7 +10,6 @@ install: |
   3. Login dan mulai menggunakan workspace
 kegunaan: |
   Cocok untuk catatan, to-do list, project management, hingga wiki internal.
-#thumbnail: "/images/software/notion-thumb.jpg"
-#image: "/images/software/notion-banner.jpg"
+thumbnail: "/img/thumbnail/notion.png"
 download_url: "https://www.notion.so/desktop"
 ---

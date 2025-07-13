@@ -9,7 +9,6 @@ install: |
   2. Pilih versi desktop atau gunakan versi online
 kegunaan: |
   Digunakan di sekolah dan universitas untuk pembelajaran visual matematika.
-#thumbnail: "/images/software/geogebra-thumb.jpg"
-#image: "/images/software/geogebra-banner.jpg"
+thumbnail: "/img/software/geogebra.png"
 download_url: "https://www.geogebra.org/download"
 ---

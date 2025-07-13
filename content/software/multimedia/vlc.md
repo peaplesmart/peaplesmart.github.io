@@ -9,7 +9,6 @@ install: |
   2. Jalankan installer dan ikuti petunjuk pemasangan
 kegunaan: |
   Cocok untuk menonton video, streaming, dan convert format media.
-#thumbnail: "/images/software/vlc-thumb.jpg"
-#image: "/images/software/vlc-banner.jpg"
+thumbnail: "/img/software/vlc.png"
 download_url: "https://www.videolan.org/vlc/"
 ---
