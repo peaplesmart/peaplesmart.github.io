@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Lainya"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/html-sqr.png"
+thumbnail: "/images/thumbnail/html-sqr.png"
 image: "/images/cover/html.png"
 title: ""
 date: 2025-06-27

@@ -1,7 +1,8 @@
 ---
 title: "Belajar HTML #03: Membuat Paragraf di HTML"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/html-sqr.png"
+author: "default"
+thumbnail: "/images/thumbnail/html-sqr.png"
 description: "Cara membuat dan memformat paragraf dalam dokumen HTML."
 series: "html"
 date: 2023-01-15

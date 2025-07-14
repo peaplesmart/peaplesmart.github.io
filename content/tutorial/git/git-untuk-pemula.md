@@ -2,19 +2,12 @@
 title: "Apa itu Git dan Kenapa Penting bagi Programmer?"
 linkTitle: "Belajar Git #01: Apa itu Git dan Kenapa Penting Bagi Programmer?"
 date: 2025-06-27
-image: "/images/cover/git-petanikode.png"
-thumbnail: "/img/thumbnail/git-sqr.png"
+image: "/images/thumbnail/git-sqr.png"
+thumbnail: "/images/cover/git-petanikode.png"
 series: "git"
 tags: ["Git"]
 description: "Pelajari dasar-dasar version control dengan Git untuk pemula."
 ---
-
-{{< image 
-    src="/images/cover/git-petanikode.png" 
-    alt="Deskripsi gambar" 
-    caption="*Keterangan gambar opsional*" 
-    class="rounded-lg shadow-md"
->}}
 
 Git adalah salah satu tool yang sering digunakan dalam proyek pengembangan software.
 
@@ -33,7 +26,7 @@ Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerj
 Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja.
 
 {{< image 
-    src="/img/git/sistem-git.png" 
+    src="/images/content/git/sistem-git.png" 
     alt="Deskripsi gambar" 
     caption="*Keterangan gambar opsional*" 
     class="rounded-lg shadow-md"
@@ -46,7 +39,7 @@ Dalam Git terdapat [Merge](./git-branch.md) untuk menyebut aktifitas penggabunga
 Sedangkan pada VCS (Version Control System) yang terpusat… database disimpan dalam satu tempat dan setiap perubahan disimpan ke sana.
 
 {{< image 
-    src="/img/git/vcs-terpusat.png" 
+    src="/images/content/git/vcs-terpusat.png" 
     alt="Deskripsi gambar" 
     caption="*Keterangan gambar opsional*" 
     class="rounded-lg shadow-md"
@@ -65,7 +58,7 @@ Git sebenarnya akan memantau semua perubahan yang terjadi pada file proyek. Lalu
 Sebelum menggunakan Git:
 
 {{< image 
-    src="/img/git/revisi-tanpa-git.png" 
+    src="/images/content/git/revisi-tanpa-git.png" 
     alt="Deskripsi gambar" 
     caption="*Keterangan gambar opsional*" 
     class="rounded-lg shadow-md"
@@ -74,7 +67,7 @@ Sebelum menggunakan Git:
 Setelah menggunakan Git:
 
 {{< image 
-    src="/img/git/database-git.png" 
+    src="/images/content/git/database-git.png" 
     alt="Deskripsi gambar" 
     caption="*Keterangan gambar opsional*" 
     class="rounded-lg shadow-md"
@@ -95,7 +88,7 @@ Git memungkinkan kita kembali ke versi revisi yang kita inginkan.
 ## Kenapa Git Penting Bagi Programmer?
 
 {{< image 
-    src="/img/git/jutsu-kolaborasi.jpg" 
+    src="/images/content/git/jutsu-kolaborasi.jpg" 
     alt="Deskripsi gambar" 
     caption="*Keterangan gambar opsional*" 
     class="rounded-lg shadow-md"

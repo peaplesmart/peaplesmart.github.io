@@ -1,14 +1,16 @@
 ---
 title: "GeoGebra"
-description: "Software matematika interaktif untuk geometri, aljabar, dan kalkulus."
+author: "default" # <-- harus ada dan sesuai dengan data/authors/default.yaml
+description: "Photomath merupakan salah satu aplikasi yang berhasil menggabungkan antara kamera dan kalkulator"
 kategori: "edukasi"
-os: ["Windows", "macOS", "Linux", "Web"]
-hardware: "RAM 4GB, layar minimal 1024x768"
+os: ["Windows", "macOS", "Linux", "Android", "iOS"]
+hardware: "Minimal RAM 2GB, CPU 1GHz"
 install: |
-  1. Kunjungi [https://www.geogebra.org/download](https://www.geogebra.org/download)
-  2. Pilih versi desktop atau gunakan versi online
+  1. Download installer dari [situs resmi](https://photomath.com/).
+  2. Jalankan installer dan ikuti petunjuk pemasangan.
+  3. Setelah terpasang, buka aplikasi dan mulai membuat kartu.
 kegunaan: |
-  Digunakan di sekolah dan universitas untuk pembelajaran visual matematika.
-thumbnail: "/img/software/geogebra.png"
-download_url: "https://www.geogebra.org/download"
+  Anki berguna untuk menghafal istilah, bahasa asing, dan berbagai topik lain menggunakan metode Spaced Repetition.
+thumbnail: "/images/content/software/geogebra.png"
+download_url: "https://photomath.com/"
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Git untuk Pemula"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/kotlin.png"
+thumbnail: "/images/thumbnail/kotlin.png"
 platform: "Multi"
 articles: 5
 level: "Pemula"

@@ -1,11 +1,9 @@
 ---
 title: "Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"
 date: 2023-06-25
-author: "Sukaroti"
-author_title: "Senior Developer"
-author_bio: "Pengembang dengan 10+ tahun pengalaman di PHP dan framework Laravel."
+author: "default"
 tags: ["Laravel", "PHP", "MySQL"]
-avatar: /images/avatar.png
+avatar: /images/global/avatar.png
 thumbnail: "/images/cover/laravel-11.png"
 image: "/images/cover/laravel-11.png"
 kategori: ["web-programming"]

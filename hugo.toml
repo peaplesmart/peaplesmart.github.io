@@ -26,4 +26,5 @@ enableRobotsTXT = true
     style = "monokai"
 
 [params]
+  author = "default"
   description = "Deskripsi situs saya"

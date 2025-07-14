@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Git untuk Pemula"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/c.webp"
+thumbnail: "/images/thumbnail/c.webp"
 platform: "Multi"
 articles: 5
 level: "Pemula"

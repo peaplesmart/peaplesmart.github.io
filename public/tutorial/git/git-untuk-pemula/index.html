@@ -4,25 +4,16 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Apa itu Git dan Kenapa Penting bagi Programmer? - Payung Kode</title>
 <meta name="description" content="Pelajari dasar-dasar version control dengan Git untuk pemula.">
 
 
-
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-
-
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-
-<link rel="shortcut icon" href="/favicon.ico">
-
-
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-
+<link rel="icon" type="image/png" href="/icons/app-icons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="/icons/app-icons/favicon.svg">
+<link rel="shortcut icon" href="/icons/app-icons/favicon.ico">
+<link rel="apple-touch-icon" href="/icons/app-icons/apple-touch-icon.png" sizes="180x180">
 <link rel="manifest" href="/site.webmanifest">
-
 
 
 <link rel="stylesheet" href="http://localhost:1313/css/styles.css">
@@ -32,14 +23,15 @@
 <meta property="og:url" content="http://localhost:1313/tutorial/git/git-untuk-pemula/">
 <meta property="og:title" content="Apa itu Git dan Kenapa Penting bagi Programmer?">
 <meta property="og:description" content="Pelajari dasar-dasar version control dengan Git untuk pemula.">
-<meta property="og:image" content="http://localhost:1313/images/cover/git-petanikode.png">
+<meta property="og:image" content="http://localhost:1313/images/thumbnail/git-sqr.png">
 
 
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://localhost:1313/tutorial/git/git-untuk-pemula/">
-<meta property="twitter:title" content="Apa itu Git dan Kenapa Penting bagi Programmer?">
-<meta property="twitter:description" content="Pelajari dasar-dasar version control dengan Git untuk pemula.">
-<meta property="twitter:image" content="http://localhost:1313/images/cover/git-petanikode.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="http://localhost:1313/tutorial/git/git-untuk-pemula/">
+<meta name="twitter:title" content="Apa itu Git dan Kenapa Penting bagi Programmer?">
+<meta name="twitter:description" content="Pelajari dasar-dasar version control dengan Git untuk pemula.">
+<meta name="twitter:image" content="http://localhost:1313/images/thumbnail/git-sqr.png">
+
 </head>
 <body class="font-sans bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
   <nav class="bg-teal-600 dark:bg-teal-900 text-white sticky top-0 z-40 shadow-md">
@@ -363,15 +355,13 @@
       
       <header class="not-prose">
         <div class="mb-4 flex items-center justify-start gap-2 text-xs md:text-base">
-          
-          <img src="http://localhost:1313/images/avatar.png" 
-               class="rounded-full inline h-6 w-6" 
-               width="24" 
-               height="24" 
-               alt="">
-          <a class="text-dark dark:text-slate-100" href="#">
             
-          </a>
+            
+
+            <img src="http://localhost:1313/images/global/avatar.png" class="rounded-full inline h-6 w-6" width="24" height="24" alt="Anonim">
+            <a class="text-dark dark:text-slate-100" href="#">
+              Anonim
+            </a>
           <time datetime="2025-06-27T00:00:00Z"
                 title="Ditulis pada 2025-06-27 00:00:00 &#43;0000"
                 class="text-gray-500 dark:text-gray-400">
@@ -404,8 +394,8 @@
         <picture class="flex justify-center">
           <img 
              class="lazyload cursor-zoom-in max-w-full h-auto lazyloaded" 
-             src="http://localhost:1313/img/thumbnail/git-sqr.png" 
-             data-src="http://localhost:1313/img/thumbnail/git-sqr.png" 
+             src="http://localhost:1313/images/cover/git-petanikode.png" 
+             data-src="http://localhost:1313/images/cover/git-petanikode.png" 
              alt="Apa itu Git dan Kenapa Penting bagi Programmer?" 
              loading="lazy">
         </picture>
@@ -413,13 +403,21 @@
       
 
       <div class="content">
-        <figure class="my-8 text-center">
+        <p>Git adalah salah satu tool yang sering digunakan dalam proyek pengembangan software.</p>
+<p>Git bahkan menjadi tool yang wajib dipahami oleh programmer, karena banyak digunakan di mana-mana.</p>
+<p>Pada kesempatan ini kita akan belajar Git dari dasar.</p>
+<p>Artikel ini hanya akan membahas pengenalan Git saja. Untuk mempelajari Git lebih lanjut, saya sudah menyediakan link di bagian akhir.</p>
+<h2 id="mengenal-git">Mengenal Git</h2>
+<p>Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.</p>
+<p>Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.</p>
+<p>Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja.</p>
+<figure class="my-8 text-center">
   <img 
-    src="http://localhost:1313/images/cover/git-petanikode.png" 
+    src="http://localhost:1313/images/content/git/sistem-git.png" 
     alt="Deskripsi gambar" 
     class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
     loading="lazy"
-    data-zoom-src="http://localhost:1313/images/cover/git-petanikode.png"
+    data-zoom-src="http://localhost:1313/images/content/git/sistem-git.png"
     onclick="zoomImage(this)"
   >
   
@@ -461,51 +459,16 @@ img.zoomed {
   border-radius: 0.5rem;
 }
 </style>
-<p>Git adalah salah satu tool yang sering digunakan dalam proyek pengembangan software.</p>
-<p>Git bahkan menjadi tool yang wajib dipahami oleh programmer, karena banyak digunakan di mana-mana.</p>
-<p>Pada kesempatan ini kita akan belajar Git dari dasar.</p>
-<p>Artikel ini hanya akan membahas pengenalan Git saja. Untuk mempelajari Git lebih lanjut, saya sudah menyediakan link di bagian akhir.</p>
-<h2 id="mengenal-git">Mengenal Git</h2>
-<p>Git adalah salah satu sistem pengontrol versi (Version Control System) pada proyek perangkat lunak yang diciptakan oleh Linus Torvalds.</p>
-<p>Pengontrol versi bertugas mencatat setiap perubahan pada file proyek yang dikerjakan oleh banyak orang maupun sendiri.</p>
-<p>Git dikenal juga dengan distributed revision control (VCS terdistribusi), artinya penyimpanan database Git tidak hanya berada dalam satu tempat saja.</p>
-<figure class="my-8 text-center">
-  <img 
-    src="http://localhost:1313/img/git/sistem-git.png" 
-    alt="Deskripsi gambar" 
-    class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
-    loading="lazy"
-    data-zoom-src="http://localhost:1313/img/git/sistem-git.png"
-    onclick="zoomImage(this)"
-  >
-  
-  <figcaption class="text-sm text-slate-500 dark:text-slate-400 mt-2">
-    <em>Keterangan gambar opsional</em>
-  </figcaption>
-  
-</figure>
-
-
-
-<style>
-img.zoomed {
-  transition: transform 0.3s ease;
-  position: relative;
-  z-index: 100;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.25);
-  border-radius: 0.5rem;
-}
-</style>
 <p>Semua orang yang terlibat dalam pengkodean proyek akan menyimpan database Git, sehingga akan memudahkan dalam mengelola proyek baik online maupun offline.</p>
 <p>Dalam Git terdapat <a href="./git-branch.md">Merge</a> untuk menyebut aktifitas penggabungan kode.</p>
 <p>Sedangkan pada VCS (Version Control System) yang terpusat… database disimpan dalam satu tempat dan setiap perubahan disimpan ke sana.</p>
 <figure class="my-8 text-center">
   <img 
-    src="http://localhost:1313/img/git/vcs-terpusat.png" 
+    src="http://localhost:1313/images/content/git/vcs-terpusat.png" 
     alt="Deskripsi gambar" 
     class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
     loading="lazy"
-    data-zoom-src="http://localhost:1313/img/git/vcs-terpusat.png"
+    data-zoom-src="http://localhost:1313/images/content/git/vcs-terpusat.png"
     onclick="zoomImage(this)"
   >
   
@@ -537,11 +500,11 @@ img.zoomed {
 <p>Sebelum menggunakan Git:</p>
 <figure class="my-8 text-center">
   <img 
-    src="http://localhost:1313/img/git/revisi-tanpa-git.png" 
+    src="http://localhost:1313/images/content/git/revisi-tanpa-git.png" 
     alt="Deskripsi gambar" 
     class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
     loading="lazy"
-    data-zoom-src="http://localhost:1313/img/git/revisi-tanpa-git.png"
+    data-zoom-src="http://localhost:1313/images/content/git/revisi-tanpa-git.png"
     onclick="zoomImage(this)"
   >
   
@@ -565,11 +528,11 @@ img.zoomed {
 <p>Setelah menggunakan Git:</p>
 <figure class="my-8 text-center">
   <img 
-    src="http://localhost:1313/img/git/database-git.png" 
+    src="http://localhost:1313/images/content/git/database-git.png" 
     alt="Deskripsi gambar" 
     class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
     loading="lazy"
-    data-zoom-src="http://localhost:1313/img/git/database-git.png"
+    data-zoom-src="http://localhost:1313/images/content/git/database-git.png"
     onclick="zoomImage(this)"
   >
   
@@ -599,11 +562,11 @@ img.zoomed {
 <h2 id="kenapa-git-penting-bagi-programmer">Kenapa Git Penting Bagi Programmer?</h2>
 <figure class="my-8 text-center">
   <img 
-    src="http://localhost:1313/img/git/jutsu-kolaborasi.jpg" 
+    src="http://localhost:1313/images/content/git/jutsu-kolaborasi.jpg" 
     alt="Deskripsi gambar" 
     class="lazyload cursor-zoom-in max-w-full h-auto rounded-lg shadow-md"
     loading="lazy"
-    data-zoom-src="http://localhost:1313/img/git/jutsu-kolaborasi.jpg"
+    data-zoom-src="http://localhost:1313/images/content/git/jutsu-kolaborasi.jpg"
     onclick="zoomImage(this)"
   >
   
@@ -834,7 +797,7 @@ img.zoomed {
     
     <div class="col-span-2 md:col-span-4 lg:col-span-2 mb-4 md:mb-6 lg:mb-0">
       <a href="https://peaplesmart.github.io/">
-        <img src="/images/Code-footer.png" alt="Logo" class="w-48 h-auto hover:opacity-80 transition" />
+        <img src="/images/global/Code-footer.png" alt="Logo" class="w-48 h-auto hover:opacity-80 transition" />
       </a>
       <p class="mt-6">Mulai petualanganmu di dunia kode <i>(coding)</i> dengan tutorial yang ramah pemula.</p>
     </div>

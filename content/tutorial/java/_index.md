@@ -1,7 +1,7 @@
 ---
 title: "Tutorial Git untuk Pemula"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/java.svg"
+thumbnail: "/images/thumbnail/java.svg"
 platform: "Multi"
 articles: 5
 level: "Pemula"

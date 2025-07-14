@@ -1,8 +1,9 @@
 ---
 # content/tutorial/html-untuk-pemula/tag-element-atribut.md
 title: "Belajar HTML #02: Memahami Tag, Element, dan Atribut dalam HTML"
+author: "default"
 date: 2025-06-27
-thumbnail: "/img/thumbnail/html-sqr.png"
+thumbnail: "/images/thumbnail/html-sqr.png"
 description: "Memahami tag, elemen, dan atribut dasar dalam HTML beserta fungsinya."
 series: "html"
 date: 2023-01-15

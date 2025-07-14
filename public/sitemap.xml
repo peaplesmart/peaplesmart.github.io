@@ -158,7 +158,13 @@
     <loc>http://localhost:1313/buku/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/data-visualization/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/html/</loc>
+    <lastmod>2023-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/buku/laravel-datables/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/buku/laravel-dataviz/</loc>
@@ -188,23 +194,15 @@
     <loc>http://localhost:1313/tags/web/</loc>
     <lastmod>2023-01-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/buku/laravel-datables/</loc>
-  </url><url>
-    <loc>http://localhost:1313/software/edukasi/anki/</loc>
-  </url><url>
-    <loc>http://localhost:1313/tags/data-visualization/</loc>
-  </url><url>
     <loc>http://localhost:1313/kategori/edukasi/</loc>
   </url><url>
     <loc>http://localhost:1313/software/edukasi/geofebra/</loc>
   </url><url>
     <loc>http://localhost:1313/software/</loc>
   </url><url>
-    <loc>http://localhost:1313/kategori/multimedia/</loc>
-  </url><url>
     <loc>http://localhost:1313/software/produktivitas/nation/</loc>
   </url><url>
-    <loc>http://localhost:1313/kategori/produktivitas/</loc>
+    <loc>http://localhost:1313/software/edukasi/photomath/</loc>
   </url><url>
     <loc>http://localhost:1313/software/edukasi/</loc>
   </url><url>

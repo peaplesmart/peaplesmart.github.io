@@ -1,7 +1,8 @@
 ---
 title: "Belajar HTML #01: Pengenalan Dasar HTML"
+author: "default"
 description: "Belajar HTML dasar dari Nol. Pahami tag-tag esensial yang sering dipakai. Lalu buat sendiri websitemu dengan HTML. Selamat Belajar!"
-thumbnail: "/img/thumbnail/html-sqr.png"
+thumbnail: "/images/thumbnail/html-sqr.png"
 series: "html"
 date: 2023-01-15
 categories:

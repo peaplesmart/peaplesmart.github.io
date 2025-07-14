@@ -1,11 +1,9 @@
 ---
 title: "Membuat CRUD Produk"
 date: 2025-07-09
-author: "Sukaroti"
-author_title: "Senior Developer"
-author_bio: "Pengembang dengan 10+ tahun pengalaman di PHP dan framework Laravel."
+author: "default"
 tags: ["Laravel", "PHP", "MySQL"]
-avatar: /images/avatar.png
+avatar: /images/global/avatar.png
 thumbnail: "/images/cover/laravel-11.png"
 image: "/images/cover/laravel-11.png"
 ---

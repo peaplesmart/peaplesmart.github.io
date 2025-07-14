@@ -3,7 +3,7 @@
 title: "Basic Programming"
 description: "Tutorial pemrograman dasar seperti C, C++, Java, Python, dan lainnya."
 date: 2025-06-27
-thumbnail: "/img/thumbnail/html-sqr.png"
+thumbnail: "/images/thumbnail/html-sqr.png"
 image: "/images/cover/html.png"
 kategori: ["basic-programming"]
 tags: ["laravel", "PHP"]
