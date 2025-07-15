@@ -17,7 +17,7 @@
 <link rel="manifest" href="/site.webmanifest">
 
 
-<link rel="stylesheet" href="http://localhost:1313/css/styles.css">
+<link rel="stylesheet" href="/css/styles.css">
 
 
 <meta property="og:type" content="website">
@@ -34,7 +34,7 @@
 <meta name="twitter:image" content="/img/og-default.jpg">
 
 </head>
-<body class="font-sans bg-gray-50 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
+<body class="font-sans bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
   <nav class="bg-teal-600 dark:bg-teal-900 text-white sticky top-0 z-40 shadow-md">
   <div class="container mx-auto px-4 lg:max-w-7xl flex justify-between">
     <div class="flex flex-row gap-1 items-center py-3 md:py-2"><a class="inline-block mr-2"
@@ -313,7 +313,7 @@
 
   <div class="container mx-auto px-4 lg:max-w-7xl mt-16">
   <div class="font-bold uppercase text-teal-600 dark:text-teal-400 text-sm mb-2">Kategori</div>
-  <h2 class="text-3xl font-bold  text-slate-500 dark:text-slate-300 tracking-tight mb-2">Mau belajar apa hari ini?</h2>
+  <h2 class="text-3xl text-slate-600 dark:text-slate-300 font-bold tracking-tight mb-2">Mau belajar apa hari ini?</h2>
   <p class="text-lg mb-8 text-slate-500 dark:text-slate-300">Temukan tutorial berdasarkan minatmu.</p>
   
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -390,76 +390,60 @@
 </div>
 
   <div class="container mx-auto px-4 lg:max-w-7xl mt-16">
-  <div
-    class="font-bold uppercase text-teal-600 dark:text-teal-400 text-sm mb-2"
-  >
+  <div class="font-bold uppercase text-teal-600 dark:text-teal-400 text-sm mb-2">
     Update
   </div>
-  <h2
-    class="text-3xl text-slate-300 dark:text-slate-500 font-bold tracking-tight mb-2"
-  >
+  <h2 class="text-3xl text-slate-600 dark:text-slate-300 font-bold tracking-tight mb-2">
     Apa yang baru di Petani Kode? 🔥
   </h2>
   <p class="text-lg mb-8 text-slate-500 dark:text-slate-300">
     Baca artikel terbaru yang masih fresh dan hangat.
   </p>
 
-  <div
-    class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-8"
-  >
+  <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mb-8">
       
 
-    <div
-      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1"
-    >
-      <a href="/post/produk-crud/" class="mb-3 inline-block">
+    <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/produk-crud/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
         <picture>
            
           <img
             class="lazyload rounded-xl object-cover h-48 w-96 dark:brightness-75 lazyloaded"
             src="http://localhost:1313/images/cover/laravel-11.png"
-            alt="Membuat CRUD Produk"
-          />
+            alt="Membuat CRUD Produk"/>
           
         </picture>
       </a>
 
       <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-        <a
-          href="/post/produk-crud/"
-          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-        >
+        <a href="/post/produk-crud/"
+          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
           Membuat CRUD Produk
         </a>
       </h3>
 
       <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
         Menambahkan Produk Tambahkan kode berikut ke dalam controller:
-ProdukController.phppublic function store(Request …
+ProdukController.phpCopypublic function store(Request …
       </p>
     </div>
     
 
-    <div
-      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1"
-    >
-      <a href="/post/tutorial-laravel/" class="mb-3 inline-block">
+    <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/tutorial-laravel/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
         <picture>
            
           <img
             class="lazyload rounded-xl object-cover h-48 w-96 dark:brightness-75 lazyloaded"
             src="http://localhost:1313/images/cover/laravel-11.png"
-            alt="Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"
-          />
+            alt="Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"/>
           
         </picture>
       </a>
 
       <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-        <a
-          href="/post/tutorial-laravel/"
-          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-        >
+        <a href="/post/tutorial-laravel/"
+          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
           Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!
         </a>
       </h3>
@@ -471,26 +455,21 @@ Instalasi …
     </div>
     
 
-    <div
-      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1"
-    >
-      <a href="/post/tutorial/" class="mb-3 inline-block">
+    <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/tutorial/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
         <picture>
            
           <img
             class="lazyload rounded-xl object-cover h-48 w-96 dark:brightness-75 lazyloaded"
             src="http://localhost:1313/images/cover/laravel-11.png"
-            alt="Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"
-          />
+            alt="Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!"/>
           
         </picture>
       </a>
 
       <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-        <a
-          href="/post/tutorial/"
-          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-        >
+        <a href="/post/tutorial/"
+          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
           Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!
         </a>
       </h3>
@@ -502,26 +481,21 @@ Instalasi …
     </div>
     
 
-    <div
-      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1"
-    >
-      <a href="/post/laravel/" class="mb-3 inline-block">
+    <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/laravel/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
         <picture>
            
           <img
             class="lazyload rounded-xl object-cover h-48 w-96 dark:brightness-75 lazyloaded"
             src="http://localhost:1313/images/cover/laravel-11.png"
-            alt="Laravel"
-          />
+            alt="Laravel"/>
           
         </picture>
       </a>
 
       <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-        <a
-          href="/post/laravel/"
-          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors"
-        >
+        <a href="/post/laravel/"
+          class="hover:text-teal-600 dark:hover:text-teal-400 transition-colors">
           Laravel
         </a>
       </h3>
@@ -534,6 +508,238 @@ Pengenalan Laravel Laravel …
     </div>
     
   </div>
+  
+  
+</div>
+
+
+  <div class="container mx-auto px-4 max-w-7xl my-16 text-slate-500 dark:text-slate-300">
+  <h2 class="text-3xl font-bold mb-4 tracking-tight">📚 Artikel Terbaru</h2>
+  <p class="text-lg mb-8">Kumpulan artikel terbaru dari kami.</p>
+
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    
+    
+    <article
+      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/produk-crud/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+        
+          
+            <img class="w-full rounded-lg h-48 object-cover" src="/images/cover/laravel-11.png" alt="" loading="lazy">
+          
+        
+      </a>
+
+      <div class="p-6">
+        <div class="flex flex-wrap items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <time datetime="2025-07-09">09 Jul 2025</time>
+          </div>
+
+          
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition">
+          <a href="/post/produk-crud/">Membuat CRUD Produk</a>
+        </h3>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
+          Menambahkan Produk Tambahkan kode berikut ke dalam controller:
+ProdukController.phpCopypublic function store(Request $request){ …
+        </p>
+
+        <div class="flex justify-between items-center">
+          <a href="/post/produk-crud/" class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:underline">
+            Baca selengkapnya
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          
+          <div class="flex space-x-1">
+            
+              <a href="/tags/laravel"
+                class="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded hover:bg-teal-100 dark:hover:bg-teal-900 transition">
+                Laravel
+              </a>
+            
+          </div>
+          
+        </div>
+      </div>
+    </article>
+    
+    <article
+      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/tutorial-laravel/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+        
+          
+            <img class="w-full rounded-lg h-48 object-cover" src="/images/cover/laravel-11.png" alt="" loading="lazy">
+          
+        
+      </a>
+
+      <div class="p-6">
+        <div class="flex flex-wrap items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <time datetime="2025-06-25">25 Jun 2025</time>
+          </div>
+
+          
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition">
+          <a href="/post/tutorial-laravel/">Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!</a>
+        </h3>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
+          Pendahuluan Laravel 11 hadir dengan berbagai fitur baru yang membuat pengembangan web lebih efisien&hellip;
+Instalasi Laravel 11 composer …
+        </p>
+
+        <div class="flex justify-between items-center">
+          <a href="/post/tutorial-laravel/" class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:underline">
+            Baca selengkapnya
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          
+          <div class="flex space-x-1">
+            
+              <a href="/tags/laravel"
+                class="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded hover:bg-teal-100 dark:hover:bg-teal-900 transition">
+                Laravel
+              </a>
+            
+          </div>
+          
+        </div>
+      </div>
+    </article>
+    
+    <article
+      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/tutorial/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+        
+          
+            <img class="w-full rounded-lg h-48 object-cover" src="/images/cover/laravel-11.png" alt="" loading="lazy">
+          
+        
+      </a>
+
+      <div class="p-6">
+        <div class="flex flex-wrap items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <time datetime="2025-06-25">25 Jun 2025</time>
+          </div>
+
+          
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition">
+          <a href="/post/tutorial/">Tutorial Laravel 11 untuk Pemula: Langsung Bisa bikin CRUD!</a>
+        </h3>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
+          Pendahuluan Laravel 11 hadir dengan berbagai fitur baru yang membuat pengembangan web lebih efisien&hellip;
+Instalasi Laravel 11 Contoh KodeCopy …
+        </p>
+
+        <div class="flex justify-between items-center">
+          <a href="/post/tutorial/" class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:underline">
+            Baca selengkapnya
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          
+          <div class="flex space-x-1">
+            
+              <a href="/tags/laravel"
+                class="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded hover:bg-teal-100 dark:hover:bg-teal-900 transition">
+                Laravel
+              </a>
+            
+          </div>
+          
+        </div>
+      </div>
+    </article>
+    
+    <article
+      class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600 dark:hover:outline-1">
+      <a href="/post/laravel/" class="flex gap-4 bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg p-4 hover:bg-slate-100 dark:hover:bg-slate-700 transition">
+        
+          
+            <img class="w-full rounded-lg h-48 object-cover" src="/images/cover/laravel-11.png" alt="" loading="lazy">
+          
+        
+      </a>
+
+      <div class="p-6">
+        <div class="flex flex-wrap items-center text-xs text-slate-500 dark:text-slate-400 mb-3 gap-2">
+          <div class="flex items-center">
+            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+            <time datetime="2023-06-25">25 Jun 2023</time>
+          </div>
+
+          
+        </div>
+
+        <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white hover:text-teal-600 dark:hover:text-teal-400 transition">
+          <a href="/post/laravel/">Laravel</a>
+        </h3>
+
+        <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 line-clamp-3">
+          #Laravel #PHP #MySQL Pemula bisa langsung bikin CRUD!
+Tutorial Laravel untuk Pemula Sabardi
+Pengenalan Laravel Laravel adalah sebuah framework PHP …
+        </p>
+
+        <div class="flex justify-between items-center">
+          <a href="/post/laravel/" class="inline-flex items-center text-teal-600 dark:text-teal-400 font-medium hover:underline">
+            Baca selengkapnya
+            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          
+          <div class="flex space-x-1">
+            
+              <a href="/tags/laravel"
+                class="text-xs bg-slate-100 dark:bg-slate-700 px-2 py-1 rounded hover:bg-teal-100 dark:hover:bg-teal-900 transition">
+                Laravel
+              </a>
+            
+          </div>
+          
+        </div>
+      </div>
+    </article>
+    
+  </div>
+
   
   
 </div>
