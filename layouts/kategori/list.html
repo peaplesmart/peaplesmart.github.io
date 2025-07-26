@@ -32,8 +32,11 @@
     Ini dia yang kamu cari
   </h2>
 
+  {{/* Ambil semua halaman dan filter berdasarkan topik */}}
   {{ $kategoriSlug := .Title | urlize }}
   {{ $filtered := where .Site.RegularPages "Params.kategori" "intersect" (slice $kategoriSlug) }}
+
+  {{ $paginator := .Paginate $filtered }}
 
   <p class="text-lg mb-8 text-slate-500 dark:text-slate-300">
     Ada {{ len $filtered }} artikel dalam kategori {{ .Title }}.
@@ -43,7 +46,7 @@
     <p class="text-slate-500 dark:text-slate-400">Belum ada artikel untuk kategori ini.</p>
   {{ else }}
     <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mb-8">
-      {{ range $filtered }}
+      {{ range $paginator.Pages }}
       <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600">
         <a href="{{ .RelPermalink }}" class="mb-3 inline-block">
       <picture>
@@ -64,7 +67,6 @@
     </div>
   {{ end }}
 
-  <!-- Pagination (opsional, kalau kamu implementasi Paginator di future update) -->
   {{ if gt .Paginator.TotalPages 1 }}
     <ul class="flex flex-row justify-center gap-2 my-8">
       {{ partial "components/pagination.html" . }}

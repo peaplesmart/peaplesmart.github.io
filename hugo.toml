@@ -5,17 +5,39 @@ title = 'Payung Kode'
 ignoreLogs = ['warning-goldmark-raw-html']
 enableRobotsTXT = true
 
+[[main]]
+  name = "Search"
+  pageRef = "/search"
+  weight = 99
+
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+
+[[related.indices]]
+  name = "topik"
+  weight = 100
+
+[[related.indices]]
+  name = "series"
+  weight = 80
+
+[[related.indices]]
+  name = "software"
+  weight = 80
+
 [pagination]
   disableAliases = false
   pagerSize = 6
   path = 'page'
 
 [taxonomies]
-  tag = "tags"
   kategori = "kategori"
+  topik = "topik"
 
 [outputs]
-  home = ["HTML"]
+  home = ["HTML", "JSON"]
   section = ["HTML"]
 
 [markup]

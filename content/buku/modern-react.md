@@ -1,7 +1,6 @@
 ---
 title: "Modern React: Be Frontend Javascript Developer"
 author: "azam" # cocokkan dengan .Site.Data.authors
-tags: ["Laravel", "Data Visualization"]
 penulis: "Muhammad Azamuddin"
 penerbit: "Literasikode"
 halaman: "250 Halaman"

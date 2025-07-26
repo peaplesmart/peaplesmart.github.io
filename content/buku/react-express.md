@@ -1,7 +1,6 @@
 ---
 title: "React & Express: Be Fullstack Javascript Developer"
 author: "azam" # cocokkan dengan .Site.Data.authors
-tags: ["Laravel", "Data Visualization"]
 penulis: "Muhammad Azamuddin"
 penerbit: "Literasikode"
 halaman: "250 Halaman"

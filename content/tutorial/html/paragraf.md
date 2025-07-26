@@ -7,10 +7,7 @@ image: "/images/cover/html.png"
 description: "Cara membuat dan memformat paragraf dalam dokumen HTML."
 series: "html"
 date: 2023-01-15
-categories:
-  - "HTML"
-  - "Web Development"
-tags:
+topik:
   - "html"
   - "pemula"
   - "web"

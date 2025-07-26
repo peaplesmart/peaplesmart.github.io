@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="container mx-auto lg:max-w-7xl my-16 px-4">
+  <h1 class="text-3xl font-bold text-slate-800 dark:text-slate-100 mb-6 text-center">
+    🔍 Pencarian Konten
+  </h1>
+
+  <!-- input -->
+  <div class="max-w-3xl mx-auto px-4">
+    <input
+      id="search-input"
+      type="text"
+      placeholder="Cari artikel..."
+      class="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring focus:ring-teal-500 transition"
+    />
+  </div>
+
+  <!-- results wrapper -->
+  <div class="mt-10 max-w-3xl mx-auto space-y-4" id="search-results">
+    <!-- Isi nanti diisi oleh JS -->
+    <!-- Contoh template result:
+    <div class="border-l-4 border-teal-500 bg-slate-50 dark:bg-slate-800 p-4 rounded-lg shadow-sm hover:shadow transition">
+      <a href="/some-article/" class="text-lg font-semibold text-slate-800 dark:text-slate-100 hover:text-teal-600 dark:hover:text-teal-400">
+        Judul Artikel
+      </a>
+      <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Ringkasan konten...</p>
+    </div>
+    -->
+  </div>
+</section>
+
+<!-- Tambah script -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+<script src="/js/search.js"></script>
+{{ end }}

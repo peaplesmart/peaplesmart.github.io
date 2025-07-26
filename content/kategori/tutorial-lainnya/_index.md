@@ -5,8 +5,10 @@ thumbnail: "/images/thumbnail/html-sqr.png"
 image: "/images/cover/html.png"
 title: ""
 date: 2025-06-27
-kategori: ["tutorial-lainya"]
-
+kategori:
+  - Tutorial Lainya
+  - Pemrograman
+  - Hugo
 ---
 
 Temukan tutorial yang ingin kamu pelajari.

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topik on Payung Kode</title>
+    <link>http://localhost:1313/topik/</link>
+    <description>Recent content in Topik on Payung Kode</description>
+    <generator>Hugo</generator>
+    <language>id</language>
+    <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/topik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web-Programming</title>
+      <link>http://localhost:1313/topik/web-programming/</link>
+      <pubDate>Thu, 10 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/web-programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Laravel</title>
+      <link>http://localhost:1313/topik/laravel/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/laravel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MySQL</title>
+      <link>http://localhost:1313/topik/mysql/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>http://localhost:1313/topik/php/</link>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>http://localhost:1313/topik/git/</link>
+      <pubDate>Fri, 27 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/topik/html/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pemula</title>
+      <link>http://localhost:1313/topik/pemula/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/pemula/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>http://localhost:1313/topik/web/</link>
+      <pubDate>Sun, 15 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Matematika</title>
+      <link>http://localhost:1313/topik/matematika/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/matematika/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Simulasi</title>
+      <link>http://localhost:1313/topik/simulasi/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/simulasi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>http://localhost:1313/topik/software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/topik/software/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

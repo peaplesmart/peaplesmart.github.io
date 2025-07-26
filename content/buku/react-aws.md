@@ -1,7 +1,6 @@
 ---
 title: "Membangun Aplikasi Full-Stack Serverless dengan AWS dan React"
 author: "azam" # cocokkan dengan .Site.Data.authors
-tags: ["Laravel", "Data Visualization"]
 penulis: "Muhammad Azamuddin"
 penerbit: "Literasikode"
 halaman: "250 Halaman"

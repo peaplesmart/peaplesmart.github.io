@@ -6,10 +6,7 @@ thumbnail: "/images/thumbnail/html-sqr.png"
 image: "/images/cover/html.png"
 series: "html"
 date: 2023-01-15
-categories:
-  - "HTML"
-  - "Web Development"
-tags:
+topik:
   - "html"
   - "pemula"
   - "web"

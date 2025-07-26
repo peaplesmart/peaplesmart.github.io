@@ -1,0 +1,59 @@
+{{ define "main" }}
+<div class="container lg:max-w-7xl my-16 mx-auto px-4">
+
+  {{/* Breadcrumb */}}
+  <div class="font-bold uppercase text-teal-600 dark:text-teal-400 text-sm mb-2">
+    <a class="underline" href="/topik">Topik</a>
+    <svg class="h-4 w-4 inline mx-1" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 111.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+    </svg>
+    {{ .Title }}
+  </div>
+
+  <h2 class="text-3xl font-bold tracking-tight mb-2 text-slate-800 dark:text-white">
+    Ini dia yang kamu cari
+  </h2>
+
+  {{/* Ambil semua halaman dan filter berdasarkan topik */}}
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ $filtered := where $pages "Params.topik" "intersect" (slice .Title) }}
+
+  {{ $paginator := .Paginate $filtered }}
+
+  <p class="text-lg mb-8 text-slate-500 dark:text-slate-300">
+    Ada {{ len $filtered }} artikel dalam topik <strong>{{ .Title }}</strong>.
+  </p>
+
+  {{ if eq (len $filtered) 0 }}
+    <p class="text-slate-500 dark:text-slate-400">Belum ada artikel untuk topik ini.</p>
+  {{ else }}
+    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4 mb-8">
+      {{ range $paginator.Pages }}
+      <div class="shadow-md p-6 rounded-2xl bg-white dark:bg-slate-800 hover:shadow-lg dark:hover:outline dark:hover:outline-slate-600">
+        <a href="{{ .RelPermalink }}" class="mb-3 inline-block">
+          <picture>
+            <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
+              style="aspect-ratio: 16/9;"
+              src="{{ .Params.thumbnail | default "/images/thumbnail/placeholder.svg" | absURL }}"
+              alt="{{ .Title }}">
+          </picture>
+        </a>
+        <h3 class="text-lg text-slate-800 dark:text-white font-bold mb-2 tracking-tight line-clamp-2">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h3>
+        <p class="text-sm text-slate-500 dark:text-slate-300 line-clamp-3">
+          {{ .Params.description | default .Summary | plainify | truncate 120 }}
+        </p>
+      </div>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ if gt $paginator.TotalPages 1 }}
+    <ul class="flex flex-row justify-center gap-2 my-8">
+      {{ partial "components/pagination.html" . }}
+    </ul>
+  {{ end }}
+
+</div>
+{{ end }}
