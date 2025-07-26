@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matematika on Payung Kode</title>
+    <title>Matematika on Octocat Kode</title>
     <link>http://localhost:1313/topik/matematika/</link>
-    <description>Recent content in Matematika on Payung Kode</description>
+    <description>Recent content in Matematika on Octocat Kode</description>
     <generator>Hugo</generator>
     <language>id</language>
     <atom:link href="http://localhost:1313/topik/matematika/index.xml" rel="self" type="application/rss+xml" />

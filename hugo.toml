@@ -1,7 +1,7 @@
 baseURL = 'https://peaplesmart.github.io/'
 languageCode = 'id'
 defaultContentLanguage = 'id'
-title = 'Payung Kode'
+title = 'Octocat Kode'
 ignoreLogs = ['warning-goldmark-raw-html']
 enableRobotsTXT = true
 

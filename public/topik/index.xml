@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Topik on Payung Kode</title>
+    <title>Topik on Octocat Kode</title>
     <link>http://localhost:1313/topik/</link>
-    <description>Recent content in Topik on Payung Kode</description>
+    <description>Recent content in Topik on Octocat Kode</description>
     <generator>Hugo</generator>
     <language>id</language>
     <lastBuildDate>Thu, 10 Jul 2025 00:00:00 +0000</lastBuildDate>
