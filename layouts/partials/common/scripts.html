@@ -85,7 +85,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   // Fetch index.json dan siapkan Fuse
-  fetch('/index.json')
+  fetch('{{ "index.json" | relURL }}')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;
