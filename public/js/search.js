@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const input = document.getElementById("search-input");
   const resultsList = document.getElementById("search-results");
 
-  fetch("/index.json")
+  fetch("index.json")
     .then(res => res.json())
     .then(data => {
       const fuse = new Fuse(data, {
