@@ -35,7 +35,7 @@
 </head>
 <body class="font-sans bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
   
-<div id="searchModal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+<div id="searchModal" class="fixed z-50 backdrop-blur-sm bg-black/30 hidden inset-0 p-4 flex justify-center items-start pt-24">
   <div class="mt-4 bg-white dark:bg-slate-700 p-6 rounded-xl w-full max-w-md shadow-lg space-y-4">
     
     
@@ -51,7 +51,7 @@
       class="w-full p-2 border border-gray-300 rounded-md dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-500">
 
     
-    <ul id="searchResults" class="space-y-2 max-h-64 overflow-y-auto"></ul>
+    <ul id="searchResults" class="space-y-2 max-h-54 overflow-y-auto"></ul>
   </div>
 </div>
 
@@ -910,12 +910,12 @@ document.addEventListener('alpine:init', () => {
     searchResults.innerHTML = results.length
       ? results.map(r => `
         <li>
-          <a href="${r.item.permalink}" class="mt-4 block p-2 rounded-md bg-white dark:bg-slate-600 text-slate-800 dark:text-white hover:bg-emerald-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+          <a href="${r.item.permalink}" class="mt-4 block p-2 rounded-md bg-white dark:bg-slate-600 hover:text-teal-600 dark:hover:text-teal-400 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-400">
             <strong>${r.item.title}</strong><br>
             <small>${r.item.content.slice(0, 80)}...</small>
           </a>
         </li>`).join('')
-      : '<li class="mt-4 text-gray-500 dark:text-gray-400">Tidak ada hasil ditemukan.</li>';
+      : '<li class="mt-4 text-slate-500 dark:text-slate-400">Tidak ada hasil ditemukan.</li>';
   });
 </script>
 
