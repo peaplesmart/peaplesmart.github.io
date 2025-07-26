@@ -1,95 +1,171 @@
-
 <!-- highlight.js -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
+<script src="{{ "js/fuse.min.js" | relURL }}"></script>
+<script src="{{ "js/lucide.min.js" | relURL }}"></script>
 
-
-
-<!-- Pastikan Alpine.js sudah di-load di baseof.html -->
+<!-- Alpine.js -->
 <script src="//unpkg.com/alpinejs" defer></script>
 <style>
   [x-cloak] { display: none !important; }
 </style>
 
-<!-- Inisialisasi store theme di Alpine.js -->
 <script>
-// static/js/alpine-theme.js
 document.addEventListener('alpine:init', () => {
-    // Inisialisasi store untuk theme management
-    Alpine.store('theme', {
-        // State untuk mode gelap
-        dark: false,
-        
-        // State untuk UI switcher (jika diperlukan)
-        switcherOpen: false,
-        
-        // State untuk mode sistem
-        system: false,
-        
-        // Inisialisasi tema saat pertama kali load
-        init() {
-            // Cek preferensi di localStorage
-            const savedTheme = localStorage.getItem('theme');
-            
-            // Cek preferensi sistem
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            // Set state berdasarkan preferensi yang ada
-            if (savedTheme === 'dark') {
-                this.dark = true;
-            } else if (savedTheme === 'light') {
-                this.dark = false;
-            } else if (savedTheme === 'system') {
-                this.system = true;
-                this.dark = systemPrefersDark;
-            } else {
-                // Default: ikuti preferensi sistem
-                this.system = true;
-                this.dark = systemPrefersDark;
-            }
-            
-            // Terapkan tema ke dokumen
-            this.applyTheme();
-            
-            // Pantau perubahan preferensi sistem
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (this.system) {
-                    this.dark = e.matches;
-                    this.applyTheme();
-                }
-            });
-        },
-        
-        // Set tema berdasarkan pilihan
-        setTheme(theme) {
-            if (theme === 'dark') {
-                this.dark = true;
-                this.system = false;
-                localStorage.setItem('theme', 'dark');
-            } else if (theme === 'light') {
-                this.dark = false;
-                this.system = false;
-                localStorage.setItem('theme', 'light');
-            } else { // system
-                this.system = true;
-                this.dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                localStorage.setItem('theme', 'system');
-            }
-            this.applyTheme();
-        },
-        
-        // Terapkan tema ke dokumen
-        applyTheme() {
-            if (this.dark) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
+
+  Alpine.store('theme', {
+    dark: false,
+    switcherOpen: false,
+    system: false,
+    init() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark') {
+        this.dark = true;
+      } else if (savedTheme === 'light') {
+        this.dark = false;
+      } else if (savedTheme === 'system') {
+        this.system = true;
+        this.dark = systemPrefersDark;
+      } else {
+        this.system = true;
+        this.dark = systemPrefersDark;
+      }
+      this.applyTheme();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (this.system) {
+          this.dark = e.matches;
+          this.applyTheme();
         }
-    });
-        // ✅ Panggil init di sini
-    Alpine.store('theme').init();
+      });
+    },
+    setTheme(theme) {
+      if (theme === 'dark') {
+        this.dark = true;
+        this.system = false;
+        localStorage.setItem('theme', 'dark');
+      } else if (theme === 'light') {
+        this.dark = false;
+        this.system = false;
+        localStorage.setItem('theme', 'light');
+      } else {
+        this.system = true;
+        this.dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        localStorage.setItem('theme', 'system');
+      }
+      this.applyTheme();
+    },
+    applyTheme() {
+      if (this.dark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  });
+
+  // ✅ Panggil init di sini
+  Alpine.store('search').init();
 });
+</script>
+
+<script>
+  lucide.createIcons();
+
+  const searchToggle = document.getElementById('searchToggle');
+  const searchModal = document.getElementById('searchModal');
+  const searchClose = document.getElementById('searchClose');
+  const searchCloseBtn = document.getElementById('searchCloseBtn');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const overlay = document.getElementById('overlay');
+
+  let fuse, fuseIndex = [];
+
+  // Fetch index.json dan siapkan Fuse
+  fetch('/index.json')
+    .then(res => res.json())
+    .then(data => {
+      fuseIndex = data;
+      fuse = new Fuse(fuseIndex, {
+        keys: ['title', 'content'],
+        threshold: 0.3
+      });
+    });
+
+  // Buka modal pencarian
+  searchToggle?.addEventListener('click', () => {
+    searchModal?.classList.remove('hidden');
+    overlay?.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    searchModal?.classList.add('backdrop-blur-sm');
+    setTimeout(() => {
+      searchInput?.focus();
+      lucide.createIcons();
+    }, 100);
+  });
+
+  // Tutup modal pencarian
+  const closeModal = () => {
+    searchModal?.classList.add('hidden');
+    overlay?.classList.add('hidden');
+    searchModal?.classList.remove('backdrop-blur-sm');
+    document.body.classList.remove('overflow-hidden');
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+  };
+
+  [searchClose, searchCloseBtn].forEach(el => {
+    el?.addEventListener('click', closeModal);
+  });
+
+  // Tombol Escape menutup modal
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  // Proses pencarian realtime
+  searchInput?.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+    if (!query || !fuse) {
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    const results = fuse.search(query).slice(0, 8);
+    searchResults.innerHTML = results.length
+      ? results.map(r => `
+        <li>
+          <a href="${r.item.permalink}" class="mt-4 block p-2 rounded-md bg-white dark:bg-slate-600 text-slate-800 dark:text-white hover:bg-emerald-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+            <strong>${r.item.title}</strong><br>
+            <small>${r.item.content.slice(0, 80)}...</small>
+          </a>
+        </li>`).join('')
+      : '<li class="mt-4 text-slate-500 dark:text-slate-400">Tidak ada hasil ditemukan.</li>';
+  });
+</script>
+
+
+<script>
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollToTopBtn.classList.remove('hidden');
+    } else {
+      scrollToTopBtn.classList.add('hidden');
+    }
+  });
+
+  scrollToTopBtn?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+  });
 </script>

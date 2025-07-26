@@ -5,7 +5,8 @@
   {{ partial "common/head.html" . }}
 </head>
 <body class="font-sans bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
-  {{ partial "common/navbar.html" . }} <!-- Ini navbar baru -->
+  {{ partial "common/search-modal.html" . }}
+  {{ partial "common/navbar.html" . }}
   
   <main>
     {{ block "main" . }}{{ end }}

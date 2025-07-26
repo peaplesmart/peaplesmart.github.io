@@ -5,11 +5,6 @@ title = 'Payung Kode'
 ignoreLogs = ['warning-goldmark-raw-html']
 enableRobotsTXT = true
 
-[[main]]
-  name = "Search"
-  pageRef = "/search"
-  weight = 99
-
 [related]
   threshold = 80
   includeNewer = true
@@ -37,8 +32,16 @@ enableRobotsTXT = true
   topik = "topik"
 
 [outputs]
-  home = ["HTML", "JSON"]
+  home = ["HTML", "SearchIndex"]
   section = ["HTML"]
+
+[outputFormats]
+  [outputFormats.SearchIndex]
+    name = "SearchIndex"
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
 
 [markup]
   [markup.goldmark]

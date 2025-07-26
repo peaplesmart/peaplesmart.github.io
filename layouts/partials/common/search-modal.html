@@ -1,0 +1,20 @@
+<!-- ========== Search Modal ========== -->
+<div id="searchModal" class="fixed z-50 backdrop-blur-sm bg-black/30 hidden inset-0 p-4 flex justify-center items-start pt-24">
+  <div class="mt-4 bg-white dark:bg-slate-700 p-6 rounded-xl w-full max-w-md shadow-lg space-y-4">
+    
+    <!-- Modal Header -->
+    <div class="flex justify-between items-center">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white">Cari Sesuatu</h2>
+      <button id="searchClose" class="text-emerald-300 dark:text-slate-800 hover:text-emerald-500">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Input Field -->
+    <input id="searchInput" type="text" placeholder="Cari tutorial..."
+      class="w-full p-2 border border-gray-300 rounded-md dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-500">
+
+    <!-- Search Result -->
+    <ul id="searchResults" class="space-y-2 max-h-54 overflow-y-auto"></ul>
+  </div>
+</div>

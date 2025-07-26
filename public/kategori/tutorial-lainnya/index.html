@@ -34,6 +34,27 @@
 
 </head>
 <body class="font-sans bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
+  
+<div id="searchModal" class="fixed inset-0 z-50 hidden bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="mt-4 bg-white dark:bg-slate-700 p-6 rounded-xl w-full max-w-md shadow-lg space-y-4">
+    
+    
+    <div class="flex justify-between items-center">
+      <h2 class="text-lg font-semibold text-gray-800 dark:text-white">Cari Sesuatu</h2>
+      <button id="searchClose" class="text-emerald-300 dark:text-slate-800 hover:text-emerald-500">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    
+    <input id="searchInput" type="text" placeholder="Cari tutorial..."
+      class="w-full p-2 border border-gray-300 rounded-md dark:bg-slate-700 dark:border-slate-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-slate-500">
+
+    
+    <ul id="searchResults" class="space-y-2 max-h-64 overflow-y-auto"></ul>
+  </div>
+</div>
+
   <nav class="bg-teal-600 dark:bg-teal-900 text-white sticky top-0 z-40 shadow-md">
   <div class="container mx-auto px-4 lg:max-w-7xl flex justify-between">
     <div class="flex flex-row gap-1 items-center py-3 md:py-2"><a class="inline-block mr-2"
@@ -95,13 +116,15 @@
             <path
               d="M13.545 2.907a13.2 13.2.0 00-3.257-1.011.05.05.0 00-.052.025c-.141.25-.297.577-.406.833a12.2 12.2.0 00-3.658.0 8 8 0 00-.412-.833.05.05.0 00-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04.0 00-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3.0 003.995 2.02.05.05.0 00.056-.019q.463-.63.818-1.329a.05.05.0 00-.01-.059l-.018-.011a9 9 0 01-1.248-.595.05.05.0 01-.02-.066l.015-.019q.127-.095.248-.195a.05.05.0 01.051-.007c2.619 1.196 5.454 1.196 8.041.0a.05.05.0 01.053.007q.121.1.248.195a.05.05.0 01-.004.085 8 8 0 01-1.249.594.05.05.0 00-.03.03.05.05.0 00.003.041c.24.465.515.909.817 1.329a.05.05.0 00.056.019 13.2 13.2.0 004.001-2.02.05.05.0 00.021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03.0 00-.02-.019m-8.198 7.307c-.789.0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807.0 1.45.73 1.438 1.613.0.888-.637 1.612-1.438 1.612m5.316.0c-.788.0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807.0 1.451.73 1.438 1.613.0.888-.631 1.612-1.438 1.612" />
           </svg> Discord</a></div>
-    <div class="flex items-center gap-3 ml-6"><a href=/search aria-label=Search title="Search the article here"
-        class="p-1 rounded-full text-teal-100 hover:bg-teal-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"><svg
-          class="h-8 w-8 md:h-6 md:w-6 active:scale-95" fill="none" viewBox="0 0 24 24" stroke="currentcolor"
-          stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z" />
-        </svg>
-      </a><button aria-label="Theme switcher" type=button
+     <div class="flex items-center gap-3 ml-6">
+      <button id="searchToggle"
+          class="p-1 rounded-full text-teal-100 hover:bg-teal-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+          aria-label="Search" title="Search the article here">
+          <svg class="h-8 w-8 md:h-6 md:w-6 active:scale-95" fill="none" viewBox="0 0 24 24" stroke="currentcolor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5A7 7 0 113 10a7 7 0 0114 0z" />
+          </svg>
+        </button>
+      <button aria-label="Theme switcher" type=button
         @click="$store.theme.switcherOpen = !$store.theme.switcherOpen" @click.away="$store.theme.switcherOpen = false"
         class="p-1 rounded-full text-teal-100 hover:bg-teal-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-teal-500">
         <svg viewBox="0 0 24 24" fill="none" class="h-8 w-8 md:h-6 md:w-6 active:scale-95"
@@ -281,7 +304,7 @@
       </footer>
     </div>
   </aside>
-</nav> 
+</nav>
   
   <main>
     
@@ -434,13 +457,12 @@
 
   
   
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script>hljs.highlightAll();</script>
-
-
+<script src="/js/fuse.min.js"></script>
+<script src="/js/lucide.min.js"></script>
 
 
 <script src="//unpkg.com/alpinejs" defer></script>
@@ -448,85 +470,162 @@
   [x-cloak] { display: none !important; }
 </style>
 
+<script>
+document.addEventListener('alpine:init', () => {
+
+  Alpine.store('theme', {
+    dark: false,
+    switcherOpen: false,
+    system: false,
+    init() {
+      const savedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (savedTheme === 'dark') {
+        this.dark = true;
+      } else if (savedTheme === 'light') {
+        this.dark = false;
+      } else if (savedTheme === 'system') {
+        this.system = true;
+        this.dark = systemPrefersDark;
+      } else {
+        this.system = true;
+        this.dark = systemPrefersDark;
+      }
+      this.applyTheme();
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (this.system) {
+          this.dark = e.matches;
+          this.applyTheme();
+        }
+      });
+    },
+    setTheme(theme) {
+      if (theme === 'dark') {
+        this.dark = true;
+        this.system = false;
+        localStorage.setItem('theme', 'dark');
+      } else if (theme === 'light') {
+        this.dark = false;
+        this.system = false;
+        localStorage.setItem('theme', 'light');
+      } else {
+        this.system = true;
+        this.dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        localStorage.setItem('theme', 'system');
+      }
+      this.applyTheme();
+    },
+    applyTheme() {
+      if (this.dark) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    }
+  });
+
+  
+  Alpine.store('search').init();
+});
+</script>
 
 <script>
+  lucide.createIcons();
 
-document.addEventListener('alpine:init', () => {
-    
-    Alpine.store('theme', {
-        
-        dark: false,
-        
-        
-        switcherOpen: false,
-        
-        
-        system: false,
-        
-        
-        init() {
-            
-            const savedTheme = localStorage.getItem('theme');
-            
-            
-            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            
-            if (savedTheme === 'dark') {
-                this.dark = true;
-            } else if (savedTheme === 'light') {
-                this.dark = false;
-            } else if (savedTheme === 'system') {
-                this.system = true;
-                this.dark = systemPrefersDark;
-            } else {
-                
-                this.system = true;
-                this.dark = systemPrefersDark;
-            }
-            
-            
-            this.applyTheme();
-            
-            
-            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-                if (this.system) {
-                    this.dark = e.matches;
-                    this.applyTheme();
-                }
-            });
-        },
-        
-        
-        setTheme(theme) {
-            if (theme === 'dark') {
-                this.dark = true;
-                this.system = false;
-                localStorage.setItem('theme', 'dark');
-            } else if (theme === 'light') {
-                this.dark = false;
-                this.system = false;
-                localStorage.setItem('theme', 'light');
-            } else { 
-                this.system = true;
-                this.dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                localStorage.setItem('theme', 'system');
-            }
-            this.applyTheme();
-        },
-        
-        
-        applyTheme() {
-            if (this.dark) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-        }
+  const searchToggle = document.getElementById('searchToggle');
+  const searchModal = document.getElementById('searchModal');
+  const searchClose = document.getElementById('searchClose');
+  const searchCloseBtn = document.getElementById('searchCloseBtn');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  const overlay = document.getElementById('overlay');
+
+  let fuse, fuseIndex = [];
+
+  
+  fetch('/index.json')
+    .then(res => res.json())
+    .then(data => {
+      fuseIndex = data;
+      fuse = new Fuse(fuseIndex, {
+        keys: ['title', 'content'],
+        threshold: 0.3
+      });
     });
-        
-    Alpine.store('theme').init();
-});
+
+  
+  searchToggle?.addEventListener('click', () => {
+    searchModal?.classList.remove('hidden');
+    overlay?.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    searchModal?.classList.add('backdrop-blur-sm');
+    setTimeout(() => {
+      searchInput?.focus();
+      lucide.createIcons();
+    }, 100);
+  });
+
+  
+  const closeModal = () => {
+    searchModal?.classList.add('hidden');
+    overlay?.classList.add('hidden');
+    searchModal?.classList.remove('backdrop-blur-sm');
+    document.body.classList.remove('overflow-hidden');
+    searchInput.value = '';
+    searchResults.innerHTML = '';
+  };
+
+  [searchClose, searchCloseBtn].forEach(el => {
+    el?.addEventListener('click', closeModal);
+  });
+
+  
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+
+  
+  searchInput?.addEventListener('input', () => {
+    const query = searchInput.value.trim();
+    if (!query || !fuse) {
+      searchResults.innerHTML = '';
+      return;
+    }
+
+    const results = fuse.search(query).slice(0, 8);
+    searchResults.innerHTML = results.length
+      ? results.map(r => `
+        <li>
+          <a href="${r.item.permalink}" class="mt-4 block p-2 rounded-md bg-white dark:bg-slate-600 text-slate-800 dark:text-white hover:bg-emerald-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-emerald-400">
+            <strong>${r.item.title}</strong><br>
+            <small>${r.item.content.slice(0, 80)}...</small>
+          </a>
+        </li>`).join('')
+      : '<li class="mt-4 text-gray-500 dark:text-gray-400">Tidak ada hasil ditemukan.</li>';
+  });
+</script>
+
+
+<script>
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollToTopBtn.classList.remove('hidden');
+    } else {
+      scrollToTopBtn.classList.add('hidden');
+    }
+  });
+
+  scrollToTopBtn?.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+  });
 </script>
 </body>
 </html>
