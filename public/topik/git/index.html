@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth dark" lang="id" x-data="" :class="{ 'dark': $store.theme.dark }">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,14 +20,14 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/topik/git/">
+<meta property="og:url" content="https://peaplesmart.github.io/topik/git/">
 <meta property="og:title" content="Git">
 <meta property="og:description" content="Deskripsi situs saya">
 <meta property="og:image" content="/img/og-default.jpg">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/topik/git/">
+<meta name="twitter:url" content="https://peaplesmart.github.io/topik/git/">
 <meta name="twitter:title" content="Git">
 <meta name="twitter:description" content="Deskripsi situs saya">
 <meta name="twitter:image" content="/img/og-default.jpg">
@@ -325,7 +325,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Apa itu Git dan Kenapa Penting bagi Programmer?">
           </picture>
         </a>
@@ -342,7 +342,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Belajar Git #1: Cara Install Git dan Konfigurasi Awal Yang Harus dilakukan">
           </picture>
         </a>
@@ -359,7 +359,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Belajar Git #03: Cara Membuat Repositoru Git Pada Proyek">
           </picture>
         </a>
@@ -376,7 +376,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Belajar Git #04: Melihat Catatan Log Revisi">
           </picture>
         </a>
@@ -393,7 +393,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Belajar Git #05: Melihat Perbandingan Revisi dengan Git Diff">
           </picture>
         </a>
@@ -410,7 +410,7 @@
           <picture>
             <img class="lazyload w-full h-48 object-cover rounded-2xl dark:brightness-75"
               style="aspect-ratio: 16/9;"
-              src="http://localhost:1313/images/cover/git-petanikode.png"
+              src="https://peaplesmart.github.io/images/cover/git-petanikode.png"
               alt="Belajar Git #06: Perintah Untuk Membatalkan Revisi">
           </picture>
         </a>
@@ -656,7 +656,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   
-  fetch('/index.json')
+  fetch('\/index.json')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;

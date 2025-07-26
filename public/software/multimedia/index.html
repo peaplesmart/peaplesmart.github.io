@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth dark" lang="id" x-data="" :class="{ 'dark': $store.theme.dark }">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,14 +20,14 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/software/multimedia/">
+<meta property="og:url" content="https://peaplesmart.github.io/software/multimedia/">
 <meta property="og:title" content="Software Multimedia">
 <meta property="og:description" content="Software untuk audio, video, dan hiburan.">
 <meta property="og:image" content="/img/og-default.jpg">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/software/multimedia/">
+<meta name="twitter:url" content="https://peaplesmart.github.io/software/multimedia/">
 <meta name="twitter:title" content="Software Multimedia">
 <meta name="twitter:description" content="Software untuk audio, video, dan hiburan.">
 <meta name="twitter:image" content="/img/og-default.jpg">
@@ -299,7 +299,7 @@
             
             <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                 <img class="lazyload rounded-md h-full w-full dark:brightness-75 lazyloaded"
-                    src="http://localhost:1313/images/thumbnail/multimedia.png" 
+                    src="https://peaplesmart.github.io/images/thumbnail/multimedia.png" 
                     alt="Software Multimedia"
                     loading="lazy">
             </picture>
@@ -358,7 +358,7 @@
                     <a href="/software/edukasi/geofebra/" class="inline-block shrink-0 h-16 w-16 md:h-24 md:w-24">
                         <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                             <img class="lazyload object-cover h-full w-full dark:brightness-75 rounded-md lazyloaded"
-                                src="http://localhost:1313/images/content/software/geogebra.png"
+                                src="https://peaplesmart.github.io/images/content/software/geogebra.png"
                                 alt="Geofebra">
                         </picture>
                     </a>
@@ -381,7 +381,7 @@
                     <a href="/software/produktivitas/nation/" class="inline-block shrink-0 h-16 w-16 md:h-24 md:w-24">
                         <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                             <img class="lazyload object-cover h-full w-full dark:brightness-75 rounded-md lazyloaded"
-                                src="http://localhost:1313/images/content/software/notion.png"
+                                src="https://peaplesmart.github.io/images/content/software/notion.png"
                                 alt="Notion">
                         </picture>
                     </a>
@@ -404,7 +404,7 @@
                     <a href="/software/edukasi/photomath/" class="inline-block shrink-0 h-16 w-16 md:h-24 md:w-24">
                         <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                             <img class="lazyload object-cover h-full w-full dark:brightness-75 rounded-md lazyloaded"
-                                src="http://localhost:1313/images/content/software/photomath.png"
+                                src="https://peaplesmart.github.io/images/content/software/photomath.png"
                                 alt="Photomath">
                         </picture>
                     </a>
@@ -427,7 +427,7 @@
                     <a href="/software/multimedia/vlc/" class="inline-block shrink-0 h-16 w-16 md:h-24 md:w-24">
                         <picture class="shrink-0 w-24 h-24 md:w-40 md:h-40">
                             <img class="lazyload object-cover h-full w-full dark:brightness-75 rounded-md lazyloaded"
-                                src="http://localhost:1313/images/content/software/vlc.png"
+                                src="https://peaplesmart.github.io/images/content/software/vlc.png"
                                 alt="VLC Media Player">
                         </picture>
                     </a>
@@ -656,7 +656,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   
-  fetch('/index.json')
+  fetch('\/index.json')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;

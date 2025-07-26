@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web Programming on Octocat Kode</title>
-    <link>http://localhost:1313/kategori/web-programming/</link>
+    <link>https://peaplesmart.github.io/kategori/web-programming/</link>
     <description>Recent content in Web Programming on Octocat Kode</description>
     <generator>Hugo</generator>
     <language>id</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="http://localhost:1313/kategori/web-programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://peaplesmart.github.io/kategori/web-programming/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

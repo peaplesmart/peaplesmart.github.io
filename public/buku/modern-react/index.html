@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth dark" lang="id" x-data="" :class="{ 'dark': $store.theme.dark }">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,17 +20,17 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/buku/modern-react/">
+<meta property="og:url" content="https://peaplesmart.github.io/buku/modern-react/">
 <meta property="og:title" content="Modern React: Be Frontend Javascript Developer">
 <meta property="og:description" content="Deskripsi situs saya">
-<meta property="og:image" content="http://localhost:1313/images/content/buku/modern-react.avif">
+<meta property="og:image" content="https://peaplesmart.github.io/images/content/buku/modern-react.avif">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/buku/modern-react/">
+<meta name="twitter:url" content="https://peaplesmart.github.io/buku/modern-react/">
 <meta name="twitter:title" content="Modern React: Be Frontend Javascript Developer">
 <meta name="twitter:description" content="Deskripsi situs saya">
-<meta name="twitter:image" content="http://localhost:1313/images/content/buku/modern-react.avif">
+<meta name="twitter:image" content="https://peaplesmart.github.io/images/content/buku/modern-react.avif">
 
 </head>
 <body class="font-sans bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-100">
@@ -300,7 +300,7 @@
       <header class="not-prose">
         <div class="mb-4 flex items-center justify-start gap-2 text-xs md:text-base">
           
-          <img src="http://localhost:1313/images/authors/octocat.png" class="rounded-full inline h-6 w-6" width="24" height="24" alt="Octocat">
+          <img src="https://peaplesmart.github.io/images/authors/octocat.png" class="rounded-full inline h-6 w-6" width="24" height="24" alt="Octocat">
           <a class="text-dark dark:text-slate-100" href="#">
             Octocat
           </a>
@@ -328,7 +328,7 @@
         <div class="col-span-1 self-start">
           <picture class="not-prose">
             <img class="lazyload dark:brightness-75 rounded-lg"
-                 src="http://localhost:1313/images/content/buku/modern-react.avif" 
+                 src="https://peaplesmart.github.io/images/content/buku/modern-react.avif" 
                  alt="Book Cover" loading="lazy">
           </picture>
         </div>
@@ -552,7 +552,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   
-  fetch('/index.json')
+  fetch('\/index.json')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth dark" lang="id" x-data="" :class="{ 'dark': $store.theme.dark }">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,14 +20,14 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/buku/">
+<meta property="og:url" content="https://peaplesmart.github.io/buku/">
 <meta property="og:title" content="Daftar Buku">
 <meta property="og:description" content="Deskripsi situs saya">
 <meta property="og:image" content="/img/og-default.jpg">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/buku/">
+<meta name="twitter:url" content="https://peaplesmart.github.io/buku/">
 <meta name="twitter:title" content="Daftar Buku">
 <meta name="twitter:description" content="Deskripsi situs saya">
 <meta name="twitter:image" content="/img/og-default.jpg">
@@ -306,7 +306,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/laravel-datatabales.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/laravel-datatabales.avif" 
                    alt="Cover Laravel Datatables">
               
             </picture>
@@ -338,7 +338,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/laravel-dataviz.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/laravel-dataviz.avif" 
                    alt="Cover Laravel Dataviz">
               
             </picture>
@@ -370,7 +370,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/laravel.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/laravel.avif" 
                    alt="Cover Laravel: Fullstack Web Series">
               
             </picture>
@@ -402,7 +402,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/react-aws.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/react-aws.avif" 
                    alt="Cover Membangun Aplikasi Full-Stack Serverless dengan AWS dan React">
               
             </picture>
@@ -434,7 +434,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/modern-react.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/modern-react.avif" 
                    alt="Cover Modern React: Be Frontend Javascript Developer">
               
             </picture>
@@ -467,7 +467,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/laravel-realtime.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/laravel-realtime.avif" 
                    alt="Cover Panduan Praktis Membuat Realtime App dengan Laravel Websockets">
               
             </picture>
@@ -499,7 +499,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/react-express.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/react-express.avif" 
                    alt="Cover React &amp; Express: Be Fullstack Javascript Developer">
               
             </picture>
@@ -532,7 +532,7 @@
             <picture class="block">
               
               <img class="object-cover w-full h-40 dark:brightness-75 rounded-md" 
-                   src="http://localhost:1313/images/content/buku/vue.avif" 
+                   src="https://peaplesmart.github.io/images/content/buku/vue.avif" 
                    alt="Cover Vuejs: Frontend Web Series">
               
             </picture>
@@ -769,7 +769,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   
-  fetch('/index.json')
+  fetch('\/index.json')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;

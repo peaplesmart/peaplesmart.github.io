@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="scroll-smooth dark" lang="id" x-data="" :class="{ 'dark': $store.theme.dark }">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -20,14 +20,14 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://localhost:1313/kategori/tutorial-lainya/">
+<meta property="og:url" content="https://peaplesmart.github.io/kategori/tutorial-lainya/">
 <meta property="og:title" content="Tutorial Lainya">
 <meta property="og:description" content="Deskripsi situs saya">
 <meta property="og:image" content="/img/og-default.jpg">
 
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="http://localhost:1313/kategori/tutorial-lainya/">
+<meta name="twitter:url" content="https://peaplesmart.github.io/kategori/tutorial-lainya/">
 <meta name="twitter:title" content="Tutorial Lainya">
 <meta name="twitter:description" content="Deskripsi situs saya">
 <meta name="twitter:image" content="/img/og-default.jpg">
@@ -523,7 +523,7 @@ document.addEventListener('alpine:init', () => {
   let fuse, fuseIndex = [];
 
   
-  fetch('/index.json')
+  fetch('\/index.json')
     .then(res => res.json())
     .then(data => {
       fuseIndex = data;
